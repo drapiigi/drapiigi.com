@@ -1,0 +1,51 @@
+:root{--bg:#f7f4ee;--ink:#141412;--mute:#6b665d;--acc:#9a7b4f;--line:#e2dccf}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:300 17px/1.75 'Inter',system-ui,sans-serif}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;letter-spacing:.01em}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+nav{position:sticky;top:0;background:rgba(247,244,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:9}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:72px}
+.mark{font-family:'Cormorant Garamond',serif;font-size:22px;text-decoration:none;letter-spacing:.12em}
+nav ul{display:flex;gap:32px;list-style:none}
+nav ul a{text-decoration:none;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);transition:color .3s}
+nav ul a:hover{color:var(--acc)}
+.hero{min-height:82vh;display:flex;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--acc)}
+.hero h1{font-size:clamp(48px,8vw,104px);line-height:1.02;margin:24px 0}
+.hero p{max-width:600px;color:var(--mute);font-size:19px}
+.rule{width:64px;height:1px;background:var(--acc);margin:40px 0}
+section{padding:120px 0;border-top:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:240px 1fr;gap:64px}
+h2{font-size:44px;line-height:1.1}
+.num{display:block;font-family:'Inter';font-size:12px;letter-spacing:.3em;color:var(--acc);margin-bottom:12px}
+.lead{font-size:20px;margin-bottom:24px}
+.job{padding:0 0 48px;margin-bottom:48px;border-bottom:1px solid var(--line)}
+.job:last-child{border:0}
+.meta{display:flex;justify-content:space-between;flex-wrap:wrap;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+h3{font-size:28px;margin:6px 0 14px}
+ul.pts{list-style:none}
+ul.pts li{padding-left:22px;position:relative;margin:8px 0;color:#3a3833}
+ul.pts li:before{content:'';position:absolute;left:0;top:.85em;width:10px;height:1px;background:var(--acc)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px}
+.card{border:1px solid var(--line);padding:32px;transition:border-color .4s,transform .4s}
+.card:hover{border-color:var(--acc);transform:translateY(-3px)}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.tags span{font-size:12px;letter-spacing:.08em;border:1px solid var(--line);padding:4px 12px}
+.btn{display:inline-block;margin-top:24px;padding:14px 34px;border:1px solid var(--ink);text-decoration:none;font-size:12px;letter-spacing:.25em;text-transform:uppercase;transition:all .35s}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.ph{background:#efe6d3;border:1px dashed var(--acc);padding:2px 8px;font-size:14px;color:#7a5e33}
+footer{padding:48px 0;border-top:1px solid var(--line);font-size:13px;color:var(--mute)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 1s ease,transform 1s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:760px){.grid{grid-template-columns:1fr;gap:24px}nav ul{display:none}section{padding:80px 0}.wrap{padding:0 22px}h2{font-size:36px}}
+.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:72px;align-items:center}
+.photo{position:relative;background:linear-gradient(145deg,#ece6da,#ddd4c3);border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.photo:after{content:'';position:absolute;inset:14px;border:1px solid rgba(154,123,79,.45)}
+.photo span{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;letter-spacing:.2em;color:var(--acc)}
+.portrait{aspect-ratio:4/5;max-width:400px;width:100%;justify-self:end}
+.thumb{aspect-ratio:3/2;margin:-32px -32px 24px}
+.btn.disabled{opacity:.4;cursor:not-allowed;pointer-events:none}
+@media(max-width:760px){.hero-grid{grid-template-columns:1fr;gap:40px}.portrait{justify-self:start;max-width:300px}.hero{padding:60px 0}}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}

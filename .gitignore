@@ -1,0 +1,5 @@
+previews/
+cv/
+*.pdf
+.DS_Store
+.env
