@@ -49,3 +49,4 @@ footer{padding:48px 0;border-top:1px solid var(--line);font-size:13px;color:var(
 .btn.disabled{opacity:.4;cursor:not-allowed;pointer-events:none}
 @media(max-width:760px){.hero-grid{grid-template-columns:1fr;gap:40px}.portrait{justify-self:start;max-width:300px}.hero{padding:60px 0}}
 .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+#expertise .cards{margin-top:48px}
